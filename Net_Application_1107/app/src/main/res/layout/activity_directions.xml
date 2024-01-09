@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Directions_Activity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/start_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:text="출발지"
+            android:textSize="18dp"
+            android:fontFamily="@font/font"/>
+
+        <EditText
+            android:id="@+id/departure_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/font"/>
+
+        <ImageButton
+            android:id="@+id/btn_dep_sttStart"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="45dp"
+            android:background="@drawable/ic_mic"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="14dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/layout1">
+
+        <TextView
+            android:id="@+id/end_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:text="목적지"
+            android:textSize="18dp"
+            android:fontFamily="@font/font"/>
+
+        <EditText
+            android:id="@+id/arrival_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/font"/>
+
+        <ImageButton
+            android:id="@+id/btn_arr_sttStart"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="45dp"
+            android:background="@drawable/ic_mic"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/listview_border_style"
+        android:layout_below="@+id/layout2"/>
+
+    <ListView
+        android:id="@+id/recent_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout2"
+        android:visibility="visible"
+        android:background="#ffffff"/>
+
+    <ListView
+        android:id="@+id/arr_directions_jibunAddr_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout2"
+        android:visibility="gone"
+        android:background="#ffffff"/>
+
+    <ListView
+        android:id="@+id/dep_directions_jibunAddr_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout1"
+        android:visibility="gone"
+        android:background="#ffffff" />
+
+</RelativeLayout>

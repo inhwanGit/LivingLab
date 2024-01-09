@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:text="설정"
+            android:textColor="#000000"
+            android:textSize="35dp"
+            android:fontFamily="@font/font"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="22dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_settings"
+            android:background="#ffffff"
+            android:scaleType="fitCenter"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5.5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/listview_border_style"/>
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <Switch
+                android:id="@+id/textRaise"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/listview_border_style"
+                android:textSize="20dp"
+                android:textColor="#575757"
+                android:fontFamily="@font/font"
+                android:text="글자 키우기" />
+            <Switch
+                android:id="@+id/SearchListOn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/listview_border_style"
+                android:textSize="20dp"
+                android:textColor="#575757"
+                android:fontFamily="@font/font"
+                android:text="검색 기록 저장" />
+            <Switch
+                android:id="@+id/VibratorOn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/listview_border_style"
+                android:textSize="20dp"
+                android:textColor="#575757"
+                android:fontFamily="@font/font"
+                android:text="진동 설정" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/changeUserType"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="20dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/listview_border_style"
+                android:textSize="20dp"
+                android:textColor="#575757"
+                android:fontFamily="@font/font"
+                android:text="장애인 유형 변경"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textSize="20dp"
+                    android:textColor="#575757"
+                    android:text="장애인 유형을 선택해 주세요."/>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+                    <RadioButton
+                        android:id="@+id/radioButton1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textSize="18dp"
+                        android:text="시각 장애인" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18dp"
+                        android:text="청각 장애인" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18dp"
+                        android:text="지체 장애인" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/changeSave"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/ic_ractangle_curve_blue"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"
+                    android:text="저장"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/changeCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_ractangle_curve_gray"
+                    android:textSize="20dp"
+                    android:textColor="#575757"
+                    android:text="취소"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

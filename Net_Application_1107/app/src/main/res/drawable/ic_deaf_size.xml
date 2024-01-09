@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="50dp"
+        android:height="50dp"
+        android:drawable="@drawable/ic_circle_what2" />
+    <item
+        android:width="35dp"
+        android:height="35dp"
+        android:gravity="center"
+        android:drawable="@drawable/icon_deaf"/>
+</layer-list>
